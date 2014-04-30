@@ -8334,12 +8334,13 @@ try{
 	driver.logStep("When I log in as Alan Turing");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.login(ServiceEndpointDataCustodian,TestRetailCustomer,TestRetailCustomerPW);
+	//driver.login(ServiceEndpointThirdParty,TestRetailCustomer,TestRetailCustomerPW);
 	//driver.assertContains("Welcome");
 	 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("And I request a Subscription using the REST API");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.partiallinkText("Authorizations")).click();
+	driver.findElement(By.partialLinkText("Authorizations")).click();
 	//Revoke Authorization
 	driver.findElement(By.id("revoke")).click();
 	//wait for revoke to occur and page to reload
