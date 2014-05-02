@@ -535,12 +535,12 @@ driver.findElement(By.name("submit")).click()
 /////////////////////////////////////////////////////////
 // Now to the upload
 /////////////////////////////////////////////////////////
-driver.findElement(By.linkText("Upload")).click();
+driver.findElement(By.partialLinkText("Upload")).click();
 driver.findElement(By.name("file")).sendKeys(TestFile);
 //driver.findElement(By.name("file")).sendKeys("C:\\_Project\\NIST\\NISTGreenButton\\Source\\OpenESPI-Greenbutton-java\\OpenESPI-DataCustodian-java\\src\\main\\resources\\fixtures\\test_usage_data.xml");
 driver.findElement(By.name("upload")).click();
-driver.findElement(By.linkText("Customer List")).click();
-driver.findElement(By.linkText(TestRetailCustomer)).click();
+driver.findElement(By.partialLinkText("Customer List")).click();
+driver.findElement(By.partialLinkText(TestRetailCustomer)).click();
 driver.findElement(By.partialLinkText("Add Usage")).click();
 driver.findElement(By.id("UUID")).clear();
 driver.findElement(By.id("UUID")).sendKeys("48C2A019-5598-4E16-B0F9-49E4FF27F5FB");
@@ -558,7 +558,7 @@ driver.findElement(By.name("j_username")).sendKeys(TestRetailCustomer)
 driver.findElement(By.name("j_password")).clear()
 driver.findElement(By.name("j_password")).sendKeys(TestRetailCustomerPW)
 driver.findElement(By.name("submit")).click()
-driver.findElement(By.linkText("Usage Points")).click();
+driver.findElement(By.partialLinkText("Usage Points")).click();
 
 sleep(5000)
 driver.findElement(By.id("logout")).click();
@@ -807,11 +807,11 @@ driver.findElement(By.name("submit")).click()
 /////////////////////////////////////////////////////////
 // Now to the upload
 /////////////////////////////////////////////////////////
-driver.findElement(By.linkText("Upload")).click();
+driver.findElement(By.partialLinkText("Upload")).click();
 driver.findElement(By.name("file")).sendKeys(TestFile);
 driver.findElement(By.name("upload")).click();
-driver.findElement(By.linkText("Customer List")).click();
-driver.findElement(By.linkText(TestRetailCustomer)).click();
+driver.findElement(By.partialLinkText("Customer List")).click();
+driver.findElement(By.partialLinkText(TestRetailCustomer)).click();
 driver.findElement(By.partialLinkText("Add Usage")).click();
 driver.findElement(By.id("UUID")).clear();
 driver.findElement(By.id("UUID")).sendKeys("48C2A019-5598-4E16-B0F9-49E4FF27F5FB");
@@ -829,9 +829,9 @@ driver.findElement(By.name("j_username")).sendKeys(TestRetailCustomer)
 driver.findElement(By.name("j_password")).clear()
 driver.findElement(By.name("j_password")).sendKeys(TestRetailCustomerPW)
 driver.findElement(By.name("submit")).click()
-driver.findElement(By.linkText("Usage Points")).click();
+driver.findElement(By.partialLinkText("Usage Points")).click();
 
-driver.findElement(By.linkText("Front Electric Meter")).click();
+driver.findElement(By.partialLinkText("Front Electric Meter")).click();
 
 sleep(5000)
 driver.findElement(By.id("logout")).click();
@@ -891,7 +891,7 @@ driver.findElement(By.name("j_username")).sendKeys(TestManager)
 driver.findElement(By.name("j_password")).clear()
 driver.findElement(By.name("j_password")).sendKeys(TestManagerPW)
 driver.findElement(By.name("submit")).click()
-//driver.findElement(By.linkText("Remove all OAuth tokens")).click();
+//driver.findElement(By.partialLinkText("Remove all OAuth tokens")).click();
 driver.findElement(By.id("logout")).click();
 ///////////////////////////////////////////////////////// 
 // Log in as Alan and do the OAuth thing
@@ -902,7 +902,7 @@ driver.findElement(By.name("j_username")).sendKeys(TestRetailCustomer);
 driver.findElement(By.name("j_password")).clear();
 driver.findElement(By.name("j_password")).sendKeys(TestRetailCustomerPW);
 driver.findElement(By.name("submit")).click();
-driver.findElement(By.linkText("Third Parties")).click();
+driver.findElement(By.partialLinkText("Third Parties")).click();
 driver.findElement(By.name("Third_party")).click();
 driver.findElement(By.cssSelector("label")).click();
 driver.findElement(By.name("next")).click();
@@ -917,8 +917,8 @@ driver.findElement(By.name("next")).click();
 driver.findElement(By.name("scope.FB=4_5_15;IntervalDuration=900;BlockDuration=monthly;HistoryLength=13")).click();
 
 driver.findElement(By.name("authorize")).click(); sleep(1000)
-driver.findElement(By.linkText("Usage Points")).click();
-driver.findElement(By.linkText("Front Electric Meter")).click();
+driver.findElement(By.partialLinkText("Usage Points")).click();
+driver.findElement(By.partialLinkText("Front Electric Meter")).click();
 sleep(5000)
 ///////////////////////////////////////////////////////// 
 //Close the browser
@@ -988,8 +988,8 @@ driver.findElement(By.name("submit")).click();
 
 sleep(5000)
 
-driver.findElement(By.linkText("Usage Points")).click();
-driver.findElement(By.linkText("Front Electric Meter")).click();
+driver.findElement(By.partialLinkText("Usage Points")).click();
+driver.findElement(By.partialLinkText("Front Electric Meter")).click();
 
 sleep(5000)
 
@@ -2849,8 +2849,8 @@ Object driver = this.class.classLoader.parseClass(new File(projectPath + "/etc/B
 		driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 		
 		// add usage point linkage
-		driver.findElement(By.linkText("Customer List")).click();
-		driver.findElement(By.linkText(TestRetailCustomer)).click();	
+		driver.findElement(By.partialLinkText("Customer List")).click();
+		driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 		driver.findElement(By.partialLinkText("Add Usage")).click();	
 		driver.findElement(By.id("UUID")).clear();
 		driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -2862,7 +2862,7 @@ Object driver = this.class.classLoader.parseClass(new File(projectPath + "/etc/B
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		driver.logStep("upload usage point file");
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
-		driver.findElement(By.linkText("Upload")).click();	
+		driver.findElement(By.partialLinkText("Upload")).click();	
 		driver.findElement(By.name("file")).sendKeys(TestFile);
 			
 		driver.findElement(By.name("upload")).click();	
@@ -3155,8 +3155,8 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -3165,7 +3165,7 @@ try{
 	driver.findElement(By.name("create")).click();
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
@@ -3181,14 +3181,14 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I look at my Usage Points page");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Usage Points")).click();	
+	driver.findElement(By.partialLinkText("Usage Points")).click();	
 */
 
 	// Corrected to the following step
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I look at my Data Custodians page");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();
+	driver.findElement(By.partialLinkText("Data Custodians")).click();
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("Then I should see Data Custodian selection page");
@@ -3198,7 +3198,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("And I select a Data Custodian from the list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();	
 	
@@ -3244,7 +3244,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I look at my Usage Points page");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Usage Points")).click();	        
+	driver.findElement(By.partialLinkText("Usage Points")).click();	        
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("Then I should see a Usage Point");
@@ -3299,7 +3299,7 @@ try{
 
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
@@ -3307,8 +3307,8 @@ try{
 
 		
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -3327,14 +3327,14 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I look at my Usage Points page");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Usage Points")).click();	
+	driver.findElement(By.partialLinkText("Usage Points")).click();	
 */
 
 	// Corrected to the following step
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I look at my Data Custodians page");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();
+	driver.findElement(By.partialLinkText("Data Custodians")).click();
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("Then I should see Data Custodian selection page");
@@ -3344,7 +3344,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("And I select a Data Custodian from the list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();	
 	
@@ -3390,7 +3390,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I look at my Usage Points page");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Usage Points")).click();	        
+	driver.findElement(By.partialLinkText("Usage Points")).click();	        
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("Then I should see a Usage Point");
@@ -3444,15 +3444,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 		
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -3471,14 +3471,14 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I look at my Usage Points page");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Usage Points")).click();	
+	driver.findElement(By.partialLinkText("Usage Points")).click();	
 */
 
 	// Corrected to the following step
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I look at my Data Custodians page");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();
+	driver.findElement(By.partialLinkText("Data Custodians")).click();
 	
 	///////////////////////////////////////////////////////////
 	driver.logStep("And I should see Data Custodian selection page");
@@ -3488,7 +3488,7 @@ try{
 	///////////////////////////////////////////////////////////
 	driver.logStep("And I select a Data Custodian from the list");
 	///////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();	
 	
@@ -3534,7 +3534,7 @@ try{
 	///////////////////////////////////////////////////////////
 	driver.logStep("When I look at my Usage Points page");
 	///////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Usage Points")).click();	
+	driver.findElement(By.partialLinkText("Usage Points")).click();	
 	
 	///////////////////////////////////////////////////////////
 	driver.logStep("Then I should see a Usage Point");
@@ -3544,7 +3544,7 @@ try{
 	///////////////////////////////////////////////////////////
 	driver.logStep("When I select Usage Point");
 	///////////////////////////////////////////////////////////
-	driver.findElement(By.linkText(usagePointDescription1)).click();	        
+	driver.findElement(By.partialLinkText(usagePointDescription1)).click();	        
 	
 	///////////////////////////////////////////////////////////
 	driver.logStep("Then I should see Usage Point details");
@@ -3557,7 +3557,7 @@ try{
 	///////////////////////////////////////////////////////////
 	driver.logStep("When I select Meter Reading");
 	///////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Fifteen Minute Electricity Consumption")).click();
+	driver.findElement(By.partialLinkText("Fifteen Minute Electricity Consumption")).click();
 		        
 	///////////////////////////////////////////////////////////
 	driver.logStep("Then I should see Meter Reading details");
@@ -3619,7 +3619,7 @@ try{
 	///////////////////////////////////////////////////////////
 	driver.logStep("And I select a Data Custodian from the list");
 	///////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();	
 	
@@ -3714,7 +3714,7 @@ try{
 	///////////////////////////////////////////////////////////
 	driver.logStep("And I select a Data Custodian from the list");
 	///////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();	
 	
@@ -3809,7 +3809,7 @@ try{
 	///////////////////////////////////////////////////////////
 	driver.logStep("And I select a Third Party from the list");
 	///////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Third Parties")).click();
+	driver.findElement(By.partialLinkText("Third Parties")).click();
 	driver.findElement(By.className("third-party")).click();
 	driver.findElement(By.name("next")).click();
 	
@@ -3904,7 +3904,7 @@ try{
 	///////////////////////////////////////////////////////////
 	driver.logStep("And I select a Third Party from the list");
 	///////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Third Parties")).click();
+	driver.findElement(By.partialLinkText("Third Parties")).click();
 	driver.findElement(By.className("third-party")).click();
 	driver.findElement(By.name("next")).click();
 	
@@ -4005,15 +4005,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -4032,7 +4032,7 @@ try{
 	
 	driver.login(ServiceEndpointThirdParty,TestManager,TestManagerPW);
 	
-	driver.findElement(By.linkText("Batch Lists")).click();
+	driver.findElement(By.partialLinkText("Batch Lists")).click();
 	driver.assertDoesNotContain("Whoops");
 
 	log.info("The following step may take up to 30 seconds to complete.");
@@ -4042,7 +4042,7 @@ try{
 	driver.logout(ServiceEndpointThirdParty);
 	
 	driver.login(ServiceEndpointThirdParty,TestRetailCustomer,TestRetailCustomerPW);
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();
 	
@@ -4060,15 +4060,15 @@ try{
 	driver.login(ServiceEndpointDataCustodian, TestManager,TestManagerPW);
 	
 	// upload usage point file Sweet Usage Point
-	driver.findElement(By.linkText("Upload")).click();		
+	driver.findElement(By.partialLinkText("Upload")).click();		
 	driver.findElement(By.name("file")).sendKeys(TestFile2);
 	driver.findElement(By.name("upload")).click();	
 	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();		
-	driver.findElement(By.linkText(TestRetailCustomer)).click();		
+	driver.findElement(By.partialLinkText("Customer List")).click();		
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();		
 	driver.findElement(By.partialLinkText("Add Usage")).click();
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID2);
@@ -4082,7 +4082,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logout(ServiceEndpointDataCustodian);
 	driver.login(ServiceEndpointDataCustodian,TestManager,TestManagerPW);
-	driver.findElement(By.linkText("Notify Third Party")).click();	
+	driver.findElement(By.partialLinkText("Notify Third Party")).click();	
         
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("Then the Third Party should be notified of the update");
@@ -4092,7 +4092,7 @@ try{
 
 	driver.assertContains("Welcome");
 
-	driver.findElement(By.linkText("Batch Lists")).click();
+	driver.findElement(By.partialLinkText("Batch Lists")).click();
 
 	int numberOfSubscriptions = driver.GetNumElsByTagName("h2");
 
@@ -4243,7 +4243,7 @@ try{
 
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
@@ -4251,8 +4251,8 @@ try{
 
 		
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -4269,7 +4269,7 @@ try{
 	driver.logStep("Given an authorized Third Party");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//driver.login(ServiceEndpointThirdParty,TestRetailCustomer,TestRetailCustomerPW);
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();
 	
@@ -4313,7 +4313,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("And I request a Subscription using the REST API");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Authorizations")).click();	
+	driver.findElement(By.partialLinkText("Authorizations")).click();	
 
 
 	//From next step (which I deleted)
@@ -4421,15 +4421,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -4445,7 +4445,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I navigate to Data Custodian list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();
+	driver.findElement(By.partialLinkText("Data Custodians")).click();
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("Then I should see a list of Data Custodians");
@@ -4498,15 +4498,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -4521,7 +4521,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I select a Data Custodian from the list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();
 		
@@ -4578,15 +4578,15 @@ try{
 
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 		
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -4601,7 +4601,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I select a Data Custodian from the list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();
 			
@@ -4673,15 +4673,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -4697,7 +4697,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I select a Data Custodian from the list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();
+	driver.findElement(By.partialLinkText("Data Custodians")).click();
 	driver.findElement(By.name("Data_custodian")).click();
 	driver.findElement(By.name("next")).click();
 	
@@ -4827,7 +4827,7 @@ sleep(5000)
 /////////////////////////////////////////////////////////
 // Now to the upload
 /////////////////////////////////////////////////////////
-driver.findElement(By.linkText("Upload")).click();
+driver.findElement(By.partialLinkText("Upload")).click();
 
 sleep(1000)
 
@@ -4908,11 +4908,11 @@ driver.findElement(By.name("submit")).click()
 /////////////////////////////////////////////////////////
 // Now to the upload
 /////////////////////////////////////////////////////////
-driver.findElement(By.linkText("Upload")).click();
+driver.findElement(By.partialLinkText("Upload")).click();
 driver.findElement(By.name("file")).sendKeys(TestFile);
 driver.findElement(By.name("upload")).click();
-driver.findElement(By.linkText("Customer List")).click();
-driver.findElement(By.linkText(TestRetailCustomer)).click();
+driver.findElement(By.partialLinkText("Customer List")).click();
+driver.findElement(By.partialLinkText(TestRetailCustomer)).click();
 driver.findElement(By.partialLinkText("Add Usage")).click();
 driver.findElement(By.id("UUID")).clear();
 driver.findElement(By.id("UUID")).sendKeys("48C2A019-5598-4E16-B0F9-49E4FF27F5FB");
@@ -4932,7 +4932,7 @@ driver.findElement(By.name("j_password")).sendKeys(TestRetailCustomerPW)
 driver.findElement(By.name("submit")).click()
 driver.findElement(By.partialLinkText("Usage Points")).click();
 
-driver.findElement(By.linkText("Front Electric Meter")).click();
+driver.findElement(By.partialLinkText("Front Electric Meter")).click();
 
 sleep(5000)
 driver.findElement(By.id("logout")).click();
@@ -5174,11 +5174,11 @@ driver.findElement(By.name("submit")).click()
 /////////////////////////////////////////////////////////
 // Now to the upload
 /////////////////////////////////////////////////////////
-driver.findElement(By.linkText("Upload")).click();
+driver.findElement(By.partialLinkText("Upload")).click();
 driver.findElement(By.name("file")).sendKeys(TestFile);
 driver.findElement(By.name("upload")).click();
-driver.findElement(By.linkText("Customer List")).click();
-driver.findElement(By.linkText(TestRetailCustomer)).click();
+driver.findElement(By.partialLinkText("Customer List")).click();
+driver.findElement(By.partialLinkText(TestRetailCustomer)).click();
 driver.findElement(By.partialLinkText("Add Usage")).click();
 driver.findElement(By.id("UUID")).clear();
 driver.findElement(By.id("UUID")).sendKeys("48C2A019-5598-4E16-B0F9-49E4FF27F5FB");
@@ -5196,9 +5196,9 @@ driver.findElement(By.name("j_username")).sendKeys(TestRetailCustomer)
 driver.findElement(By.name("j_password")).clear()
 driver.findElement(By.name("j_password")).sendKeys(TestRetailCustomerPW)
 driver.findElement(By.name("submit")).click()
-driver.findElement(By.linkText("Usage Points")).click();
+driver.findElement(By.partialLinkText("Usage Points")).click();
 
-driver.findElement(By.linkText("Front Electric Meter")).click();
+driver.findElement(By.partialLinkText("Front Electric Meter")).click();
 
 sleep(5000)
 driver.findElement(By.id("logout")).click();
@@ -5259,7 +5259,7 @@ driver.findElement(By.name("j_username")).sendKeys(TestManager)
 driver.findElement(By.name("j_password")).clear()
 driver.findElement(By.name("j_password")).sendKeys(TestManagerPW)
 driver.findElement(By.name("submit")).click()
-//driver.findElement(By.linkText("Remove all OAuth tokens")).click();
+//driver.findElement(By.partialLinkText("Remove all OAuth tokens")).click();
 driver.findElement(By.id("logout")).click();
 ///////////////////////////////////////////////////////// 
 // Log in as Alan and do the OAuth thing
@@ -5270,7 +5270,7 @@ driver.findElement(By.name("j_username")).sendKeys(TestRetailCustomer);
 driver.findElement(By.name("j_password")).clear();
 driver.findElement(By.name("j_password")).sendKeys(TestRetailCustomerPW);
 driver.findElement(By.name("submit")).click();
-driver.findElement(By.linkText("Third Parties")).click();
+driver.findElement(By.partialLinkText("Third Parties")).click();
 driver.findElement(By.name("Third_party")).click();
 driver.findElement(By.cssSelector("label")).click();
 driver.findElement(By.name("next")).click();
@@ -5287,8 +5287,8 @@ driver.findElement(By.name("next")).click();
 driver.findElement(By.name("scope.FB=4_5_15;IntervalDuration=3600;BlockDuration=monthly;HistoryLength=13")).click();
 
 driver.findElement(By.name("authorize")).click(); sleep(1000)
-driver.findElement(By.linkText("Usage Points")).click();
-driver.findElement(By.linkText("Front Electric Meter")).click();
+driver.findElement(By.partialLinkText("Usage Points")).click();
+driver.findElement(By.partialLinkText("Front Electric Meter")).click();
 sleep(5000)
 ///////////////////////////////////////////////////////// 
 //Close the browser
@@ -5359,9 +5359,9 @@ driver.findElement(By.name("submit")).click();
 
 sleep(5000)
 
-driver.findElement(By.linkText("Authorizations")).click();
+driver.findElement(By.partialLinkText("Authorizations")).click();
 //sleep(1000)
-//driver.findElement(By.linkText("Front Electric Meter")).click();
+//driver.findElement(By.partialLinkText("Front Electric Meter")).click();
 driver.findElement(By.name("third_party"));
 
 sleep(5000)
@@ -5446,11 +5446,11 @@ driver.findElement(By.name("submit")).click()
 /////////////////////////////////////////////////////////
 // Now to the upload
 /////////////////////////////////////////////////////////
-driver.findElement(By.linkText("Upload")).click();
+driver.findElement(By.partialLinkText("Upload")).click();
 driver.findElement(By.name("file")).sendKeys(TestFile);
 driver.findElement(By.name("upload")).click();
-driver.findElement(By.linkText("Customer List")).click();
-driver.findElement(By.linkText(TestRetailCustomer)).click();
+driver.findElement(By.partialLinkText("Customer List")).click();
+driver.findElement(By.partialLinkText(TestRetailCustomer)).click();
 driver.findElement(By.partialLinkText("Add Usage")).click();
 driver.findElement(By.id("UUID")).clear();
 driver.findElement(By.id("UUID")).sendKeys("48C2A019-5598-4E16-B0F9-49E4FF27F5FB");
@@ -5468,9 +5468,9 @@ driver.findElement(By.name("j_username")).sendKeys(TestRetailCustomer)
 driver.findElement(By.name("j_password")).clear()
 driver.findElement(By.name("j_password")).sendKeys(TestRetailCustomerPW)
 driver.findElement(By.name("submit")).click()
-driver.findElement(By.linkText("Usage Points")).click();
+driver.findElement(By.partialLinkText("Usage Points")).click();
 
-driver.findElement(By.linkText("Front Electric Meter")).click();
+driver.findElement(By.partialLinkText("Front Electric Meter")).click();
 
 sleep(5000)
 driver.findElement(By.id("logout")).click();
@@ -5535,7 +5535,7 @@ driver.findElement(By.name("j_username")).sendKeys(TestManager)
 driver.findElement(By.name("j_password")).clear()
 driver.findElement(By.name("j_password")).sendKeys(TestManagerPW)
 driver.findElement(By.name("submit")).click()
-//driver.findElement(By.linkText("Remove all OAuth tokens")).click();
+//driver.findElement(By.partialLinkText("Remove all OAuth tokens")).click();
 driver.findElement(By.id("logout")).click();
 ///////////////////////////////////////////////////////// 
 // Log in as Alan and do the OAuth thing
@@ -5546,7 +5546,7 @@ driver.findElement(By.name("j_username")).sendKeys(TestRetailCustomerDC);
 driver.findElement(By.name("j_password")).clear();
 driver.findElement(By.name("j_password")).sendKeys(TestRetailCustomerPWDC);
 driver.findElement(By.name("submit")).click();
-driver.findElement(By.linkText("Third Parties")).click();
+driver.findElement(By.partialLinkText("Third Parties")).click();
 //driver.findElement(By.name("Third_party")).click();
 driver.findElement(By.xpath("(//input[@name='Third_party'])[2]")).click();
 //driver.findElement(By.cssSelector("label")).click();
@@ -5558,7 +5558,7 @@ driver.findElement(By.id("popuppassword")).clear();
 driver.findElement(By.id("popuppassword")).sendKeys(TestRetailCustomerPW);
 //driver.findElement(By.id("signin_submit")).click();
 sleep(3000)
-driver.findElement(By.linkText("Continue")).click();
+driver.findElement(By.partialLinkText("Continue")).click();
 
 /*
 driver.findElement(By.name("scope")).click();
@@ -5567,8 +5567,8 @@ driver.findElement(By.name("next")).click();
 driver.findElement(By.name("scope.FB=4_5_15;IntervalDuration=900;BlockDuration=monthly;HistoryLength=13")).click();
 
 driver.findElement(By.name("authorize")).click(); sleep(1000)
-driver.findElement(By.linkText("Usage Points")).click();
-driver.findElement(By.linkText("Front Electric Meter")).click();
+driver.findElement(By.partialLinkText("Usage Points")).click();
+driver.findElement(By.partialLinkText("Front Electric Meter")).click();
 sleep(5000)
 ///////////////////////////////////////////////////////// 
 //Close the browser
@@ -5644,9 +5644,9 @@ driver.findElement(By.name("submit")).click();
 
 sleep(5000)
 
-driver.findElement(By.linkText("Authorizations")).click();
+driver.findElement(By.partialLinkText("Authorizations")).click();
 //sleep(1000)
-//driver.findElement(By.linkText("Front Electric Meter")).click();
+//driver.findElement(By.partialLinkText("Front Electric Meter")).click();
 driver.findElement(By.name("third_party"));
 
 sleep(5000)
@@ -5709,15 +5709,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -5736,7 +5736,7 @@ try{
 	
 	driver.login(ServiceEndpointThirdParty,TestManager,TestManagerPW);
 	
-	driver.findElement(By.linkText("Batch Lists")).click();
+	driver.findElement(By.partialLinkText("Batch Lists")).click();
 	driver.assertDoesNotContain("Whoops");
 
 	log.info("The following step may take up to 30 seconds to complete.");
@@ -5746,7 +5746,7 @@ try{
 	driver.logout(ServiceEndpointThirdParty);
 	
 	driver.login(ServiceEndpointThirdParty,TestRetailCustomer,TestRetailCustomerPW);
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();
 	
@@ -5764,15 +5764,15 @@ try{
 	driver.login(ServiceEndpointDataCustodian, TestManager,TestManagerPW);
 	
 	// upload usage point file Sweet Usage Point
-	driver.findElement(By.linkText("Upload")).click();		
+	driver.findElement(By.partialLinkText("Upload")).click();		
 	driver.findElement(By.name("file")).sendKeys(TestFile2);
 	driver.findElement(By.name("upload")).click();	
 	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();		
-	driver.findElement(By.linkText(TestRetailCustomer)).click();		
+	driver.findElement(By.partialLinkText("Customer List")).click();		
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();		
 	driver.findElement(By.partialLinkText("Add Usage")).click();
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID2);
@@ -5786,7 +5786,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logout(ServiceEndpointDataCustodian);
 	driver.login(ServiceEndpointDataCustodian,TestManager,TestManagerPW);
-	driver.findElement(By.linkText("Notify Third Party")).click();	
+	driver.findElement(By.partialLinkText("Notify Third Party")).click();	
         
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("Then the Third Party should be notified of the update");
@@ -5796,7 +5796,7 @@ try{
 
 	driver.assertContains("Welcome");
 
-	driver.findElement(By.linkText("Batch Lists")).click();
+	driver.findElement(By.partialLinkText("Batch Lists")).click();
 
 	int numberOfSubscriptions = driver.GetNumElsByTagName("h2");
 
@@ -5947,7 +5947,7 @@ try{
 
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
@@ -5955,8 +5955,8 @@ try{
 
 		
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -5973,7 +5973,7 @@ try{
 	driver.logStep("Given an authorized Third Party");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//driver.login(ServiceEndpointThirdParty,TestRetailCustomer,TestRetailCustomerPW);
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();
 	
@@ -6017,7 +6017,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("And I request a Subscription using the REST API");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Authorizations")).click();	
+	driver.findElement(By.partialLinkText("Authorizations")).click();	
 
 
 	//From next step (which I deleted)
@@ -6128,15 +6128,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -6152,7 +6152,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I navigate to Data Custodian list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();
+	driver.findElement(By.partialLinkText("Data Custodians")).click();
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("Then I should see a list of Data Custodians");
@@ -6207,15 +6207,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -6230,7 +6230,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I select a Data Custodian from the list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();
 	//driver.findElement(By.name("LondonHydro")).click();		
 	driver.findElement(By.name("next")).click();
@@ -6290,15 +6290,15 @@ try{
 
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 		
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -6313,7 +6313,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I select a Data Custodian from the list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	//driver.findElement(By.name("LondonHydro")).click();
 	driver.findElement(By.name("next")).click();
@@ -6388,15 +6388,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -6412,7 +6412,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I select a Data Custodian from the list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();
+	driver.findElement(By.partialLinkText("Data Custodians")).click();
 	driver.findElement(By.name("Data_custodian")).click();
 	//driver.findElement(By.name("LondonHydro")).click();
 	driver.findElement(By.name("next")).click();
@@ -6524,8 +6524,8 @@ driver.findElement(By.name("j_username")).sendKeys(TestManager)
 driver.findElement(By.name("j_password")).clear()
 driver.findElement(By.name("j_password")).sendKeys(TestManagerPW)
 driver.findElement(By.name("submit")).click()
-//driver.findElement(By.linkText("Remove all OAuth tokens")).click();
-driver.findElement(By.linkText("Customer List")).click()
+//driver.findElement(By.partialLinkText("Remove all OAuth tokens")).click();
+driver.findElement(By.partialLinkText("Customer List")).click()
 driver.findElement(By.id("logout")).click();
 driver.quit() </script></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="RCLogsIntoLHDC Server" searchProperties="true"><con:settings/><con:testStep type="groovy" name="RCLogsIn"><con:settings/><con:config><script>///////////////////////////////////////////////////////// 
 // Note: Generated by capture using Selenium in FF.
@@ -6581,8 +6581,8 @@ driver.findElement(By.name("j_username")).sendKeys(TestRetailCustomer)
 driver.findElement(By.name("j_password")).clear()
 driver.findElement(By.name("j_password")).sendKeys(TestRetailCustomerPW)
 driver.findElement(By.name("submit")).click()
-//driver.findElement(By.linkText("Remove all OAuth tokens")).click();
-driver.findElement(By.linkText("Third Parties")).click()
+//driver.findElement(By.partialLinkText("Remove all OAuth tokens")).click();
+driver.findElement(By.partialLinkText("Third Parties")).click()
 driver.findElement(By.id("logout")).click();
 driver.quit() </script></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DCLogsIntoTP Server" searchProperties="true"><con:settings/><con:testStep type="groovy" name="DCLogsIn"><con:settings/><con:config><script>///////////////////////////////////////////////////////// 
 // Note: Generated by capture using Selenium in FF.
@@ -6638,8 +6638,8 @@ driver.findElement(By.name("j_username")).sendKeys(TestManager)
 driver.findElement(By.name("j_password")).clear()
 driver.findElement(By.name("j_password")).sendKeys(TestManagerPW)
 driver.findElement(By.name("submit")).click()
-//driver.findElement(By.linkText("Remove all OAuth tokens")).click();
-driver.findElement(By.linkText("Customer List")).click()
+//driver.findElement(By.partialLinkText("Remove all OAuth tokens")).click();
+driver.findElement(By.partialLinkText("Customer List")).click()
 driver.findElement(By.id("logout")).click();
 driver.quit() </script></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="RCLogsIntoTP Server" searchProperties="true"><con:settings/><con:testStep type="groovy" name="RCLogsIn"><con:settings/><con:config><script>///////////////////////////////////////////////////////// 
 // Note: Generated by capture using Selenium in FF.
@@ -6695,8 +6695,8 @@ driver.findElement(By.name("j_username")).sendKeys(TestRetailCustomer)
 driver.findElement(By.name("j_password")).clear()
 driver.findElement(By.name("j_password")).sendKeys(TestRetailCustomerPW)
 driver.findElement(By.name("submit")).click()
-//driver.findElement(By.linkText("Remove all OAuth tokens")).click();
-driver.findElement(By.linkText("Data Custodians")).click()
+//driver.findElement(By.partialLinkText("Remove all OAuth tokens")).click();
+driver.findElement(By.partialLinkText("Data Custodians")).click()
 driver.findElement(By.id("logout")).click();
 driver.quit() </script></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestOAuthAccessToken Server" searchProperties="true"><con:settings/><con:testStep type="groovy" name="resetDB" disabled="true"><con:settings/><con:config><script>def project = testRunner.testCase.testSuite.project
 def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context)
@@ -6901,11 +6901,11 @@ try {
 	// Now to the upload
 	/////////////////////////////////////////////////////////
 	// Alan id=1
-	driver.findElement(By.linkText("Upload")).click();
+	driver.findElement(By.partialLinkText("Upload")).click();
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 	driver.findElement(By.name("upload")).click();
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();
 	driver.findElement(By.partialLinkText("Add Usage")).click();
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys("48C2A019-5598-4E16-B0F9-49E4FF27F5FB");
@@ -6914,11 +6914,11 @@ try {
 	// Charles id=5
 	//TestFile=projectPath + "/../data/" + "Gas.xml"
 	TestFile= 'C:\\Users\\799943\\Desktop\\OpenESPI-GreenButtonCMDTest\\data\\' + project.getPropertyValue("TestFile2")
-	driver.findElement(By.linkText("Upload")).click();
+	driver.findElement(By.partialLinkText("Upload")).click();
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 	driver.findElement(By.name("upload")).click();
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText("charles")).click();
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText("charles")).click();
 	driver.findElement(By.partialLinkText("Add Usage")).click();
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys("0642EABA-8E42-4D1A-A375-AF54993C007B");
@@ -6995,7 +6995,7 @@ try {
 	driver.findElement(By.name("j_password")).clear();
 	driver.findElement(By.name("j_password")).sendKeys("koala");
 	driver.findElement(By.name("submit")).click();
-	driver.findElement(By.linkText("Third Parties")).click();
+	driver.findElement(By.partialLinkText("Third Parties")).click();
 	driver.findElement(By.name("Third_party")).click();
 	driver.findElement(By.cssSelector("label")).click();
 	driver.findElement(By.name("next")).click();
@@ -7035,7 +7035,7 @@ try {
 	driver.findElement(By.name("j_password")).clear();
 	driver.findElement(By.name("j_password")).sendKeys("koala");
 	driver.findElement(By.name("submit")).click();
-	driver.findElement(By.linkText("Third Parties")).click();
+	driver.findElement(By.partialLinkText("Third Parties")).click();
 	driver.findElement(By.name("Third_party")).click();
 	driver.findElement(By.cssSelector("label")).click();
 	driver.findElement(By.name("next")).click();
@@ -7191,8 +7191,8 @@ driver.findElement(By.name("j_username")).sendKeys(TestRetailCustomer)
 driver.findElement(By.name("j_password")).clear()
 driver.findElement(By.name("j_password")).sendKeys(TestRetailCustomerPW)
 driver.findElement(By.name("submit")).click()
-//driver.findElement(By.linkText("Remove all OAuth tokens")).click();
-driver.findElement(By.linkText("Usage Points")).click()
+//driver.findElement(By.partialLinkText("Remove all OAuth tokens")).click();
+driver.findElement(By.partialLinkText("Usage Points")).click()
 
 driver.findElement(By.id("startTime")).clear()
 driver.findElement(By.id("startTime")).sendKeys("2012-02-01 T10:31:59 Z")
@@ -7319,15 +7319,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -7344,7 +7344,7 @@ try{
 	
 	driver.login(ServiceEndpointThirdParty,TestManager,TestManagerPW);
 	
-	driver.findElement(By.linkText("Batch Lists")).click();
+	driver.findElement(By.partialLinkText("Batch Lists")).click();
 	driver.assertDoesNotContain("Whoops");
 
 	log.info("The following step may take up to 30 seconds to complete.");
@@ -7354,7 +7354,7 @@ try{
 	driver.logout(ServiceEndpointThirdParty);
 	
 	driver.login(ServiceEndpointThirdParty,TestRetailCustomer,TestRetailCustomerPW);
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();
 
@@ -7373,15 +7373,15 @@ try{
 	driver.login(ServiceEndpointDataCustodian, TestManager,TestManagerPW);
 	
 	// upload usage point file Sweet Usage Point
-	driver.findElement(By.linkText("Upload")).click();		
+	driver.findElement(By.partialLinkText("Upload")).click();		
 	driver.findElement(By.name("file")).sendKeys(TestFile2);
 	driver.findElement(By.name("upload")).click();	
 	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();		
-	driver.findElement(By.linkText(TestRetailCustomer)).click();		
+	driver.findElement(By.partialLinkText("Customer List")).click();		
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();		
 	driver.findElement(By.partialLinkText("Add Usage")).click();
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID2);
@@ -7393,7 +7393,7 @@ try{
 	// Check for Notifications
 	driver.login(ServiceEndpointThirdParty,TestManager,TestManagerPW);
 	
-	driver.findElement(By.linkText("Batch Lists")).click();
+	driver.findElement(By.partialLinkText("Batch Lists")).click();
 	driver.assertDoesNotContain("Whoops");
 
 	log.info("The following step may take up to 30 seconds to complete.");
@@ -7415,7 +7415,7 @@ try{
 	driver.logStep("When I notify the Third Party");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.login(ServiceEndpointDataCustodian,TestManager,TestManagerPW);
-	driver.findElement(By.linkText("Notify Third Party")).click();	
+	driver.findElement(By.partialLinkText("Notify Third Party")).click();	
         
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("Then the Third Party should be notified of the update");
@@ -7425,7 +7425,7 @@ try{
 
 	driver.assertContains("Welcome");
 
-	driver.findElement(By.linkText("Batch Lists")).click();
+	driver.findElement(By.partialLinkText("Batch Lists")).click();
 
 	int numberOfSubscriptions = driver.GetNumElsByTagName("h2");
 
@@ -7575,7 +7575,7 @@ try{
 
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
@@ -7583,8 +7583,8 @@ try{
 
 		
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -7599,7 +7599,7 @@ try{
 	driver.logStep("Given an authorized Third Party");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//driver.login(ServiceEndpointThirdParty,TestRetailCustomer,TestRetailCustomerPW);
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();
 	
@@ -7631,7 +7631,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("And I request a Subscription using the REST API");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Authorizations")).click();	
+	driver.findElement(By.partialLinkText("Authorizations")).click();	
 
 	List<WebElement> rows = driver.FindElementsByXpath("//td[@class='subscription_id']");
 		
@@ -7719,15 +7719,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -7741,7 +7741,7 @@ try{
 	driver.logStep("Given an authorized Third Party");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//driver.login(ServiceEndpointThirdParty,TestRetailCustomer,TestRetailCustomerPW);
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();
 	
@@ -7768,7 +7768,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("And I navigate to the Authorizations page");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Authorizations")).click();
+	driver.findElement(By.partialLinkText("Authorizations")).click();
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("Then I should see a list of Authorizations");
@@ -7836,15 +7836,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -7858,7 +7858,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I navigate to Data Custodian list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();
+	driver.findElement(By.partialLinkText("Data Custodians")).click();
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("Then I should see a list of Data Custodians");
@@ -7911,15 +7911,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -7932,7 +7932,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I select a Data Custodian from the list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();
 		
@@ -7989,15 +7989,15 @@ try{
 
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 		
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -8010,7 +8010,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I select a Data Custodian from the list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();
 			
@@ -8082,15 +8082,15 @@ try{
 	driver.assertUrlEndsWith("/" + DataCustodianContext + "/custodian/home");
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
 	driver.assertDoesNotContain("Unable to process file");
 	
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -8104,7 +8104,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("When I select a Data Custodian from the list");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.linkText("Data Custodians")).click();
+	driver.findElement(By.partialLinkText("Data Custodians")).click();
 	driver.findElement(By.name("Data_custodian")).click();
 	driver.findElement(By.name("next")).click();
 	
@@ -8282,7 +8282,7 @@ try{
 
 
 	// upload usage point file
-	driver.findElement(By.linkText("Upload")).click();	
+	driver.findElement(By.partialLinkText("Upload")).click();	
 	driver.findElement(By.name("file")).sendKeys(TestFile);
 		
 	driver.findElement(By.name("upload")).click();	
@@ -8290,8 +8290,8 @@ try{
 
 		
 	// add usage point linkage
-	driver.findElement(By.linkText("Customer List")).click();
-	driver.findElement(By.linkText(TestRetailCustomer)).click();	
+	driver.findElement(By.partialLinkText("Customer List")).click();
+	driver.findElement(By.partialLinkText(TestRetailCustomer)).click();	
 	driver.findElement(By.partialLinkText("Add Usage")).click();	
 	driver.findElement(By.id("UUID")).clear();
 	driver.findElement(By.id("UUID")).sendKeys(usagePointUUID1);
@@ -8306,7 +8306,7 @@ try{
 	driver.logStep("Given an authorized Third Party");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//driver.login(ServiceEndpointThirdParty,TestRetailCustomer,TestRetailCustomerPW);
-	driver.findElement(By.linkText("Data Custodians")).click();	
+	driver.findElement(By.partialLinkText("Data Custodians")).click();	
 	driver.findElement(By.name("Data_custodian")).click();	
 	driver.findElement(By.name("next")).click();
 	
@@ -8485,7 +8485,7 @@ try{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	driver.logStep("And I request a Subscription using the REST API");
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	driver.findElement(By.partiallinkText("Authorizations")).click();
+	driver.findElement(By.partialpartialLinkText("Authorizations")).click();
 	//Revoke Authorization
 	driver.findElement(By.id("revoke")).click();
 	//wait for revoke to occur and page to reload
