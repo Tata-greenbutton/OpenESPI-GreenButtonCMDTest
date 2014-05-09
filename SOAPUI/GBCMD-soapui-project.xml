@@ -7266,7 +7266,7 @@ driver.findElementByTagName("h2")
 
 driver.findElement(By.id("logout")).click();
 driver.quit() 
-</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Copy of Feature: Notification Server" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:testStep type="groovy" name="Feature: Notification"><con:settings/><con:config><script>//******************************************************************************************************************
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Feature: Notification EnergyOS" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:testStep type="groovy" name="Feature: Notification"><con:settings/><con:config><script>//******************************************************************************************************************
 //******************************************************************************************************************
 log.info("Feature: Notification");
 log.info("  As Data Custodian,");
@@ -7446,7 +7446,7 @@ try{
 //Close the browser
 driver.quit();
 
-</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Copy of Feature: Subscription Server" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:testStep type="groovy" name="Feature: Subscription"><con:settings/><con:config><script>//******************************************************************************************************************
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Feature: Subscription EnergyOS" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:testStep type="groovy" name="Feature: Subscription"><con:settings/><con:config><script>//******************************************************************************************************************
 //******************************************************************************************************************
 log.info("Feature: Subscription");
 log.info("  As a Third Party");
@@ -7791,7 +7791,7 @@ try{
 
 //Close the browser
 driver.quit();
-</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Copy of Feature: OAuth Server" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:testStep type="groovy" name="Feature: OAuth"><con:settings/><con:config><script>//******************************************************************************************************************
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Feature: OAuth EnergyOS" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:testStep type="groovy" name="Feature: OAuth"><con:settings/><con:config><script>//******************************************************************************************************************
 //******************************************************************************************************************
 log.info("Feature: OAuth");
 log.info("As Retail Customer, I should be able to see Data Custodian list");
